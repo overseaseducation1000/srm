@@ -1,0 +1,227 @@
+/* Test component css */
+.details-container {
+  margin-top: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: "#010000";
+}
+iframe {
+  min-height: 100vh;
+  width: 100%;
+}
+/* TestInstructions component css */
+.test-instructions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  min-height: 100vh;
+  color: "#010000";
+}
+.heading {
+  font-size: 35px;
+  color: "#010000";
+  text-align: center;
+  text-decoration: underline;
+}
+.instruction-container {
+  margin: auto;
+  text-align: left;
+  min-height: 400px;
+  width: 800px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  overflow-y: scroll;
+  padding: 20px;
+  margin-bottom: 10px;
+  color: "#010000";
+}
+.instruction-heading {
+  font-size: 30px;
+  text-align: center;
+  color: "#010000";
+  text-decoration: underline;
+}
+.good-luck {
+  font-size: 30px;
+  color: "#010000";
+}
+.instructions {
+  font-size: 18px;
+}
+.label {
+  font-size: 20px;
+  color: "#010000";
+}
+@media screen and (min-height: 800px) {
+  .test-instructions {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 910px) {
+  .instruction-container {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .instruction-container {
+    width: 400px;
+  }
+  .heading {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .instruction-container {
+    width: 300px;
+  }
+  .heading {
+    font-size: 20px;
+    margin-right: 40px;
+    margin-left: 30px;
+  }
+  .instruction-heading {
+    font-size: 28px;
+  }
+  .good-luck {
+    font-size: 28px;
+  }
+  .instructions {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .heading {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .instruction-container {
+    width: 220px;
+  }
+  .heading {
+    font-size: 16px;
+  }
+  .instruction-heading {
+    font-size: 20px;
+  }
+  .good-luck {
+    font-size: 20px;
+  }
+  .instructions {
+    font-size: 16px;
+  }
+  .label {
+    font-size: 15px;
+  }
+}
+.cont-test-inst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.start-button {
+  margin-left: 10px;
+  background-color: #004461;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.not-start-button {
+  margin-left: 10px;
+  background-color: grey;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 15px;
+}
+.test-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pdf-headerr {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004461;
+  color: white;
+  height: 60px;
+}
+.logo-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.anchor {
+  font-size: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.logo1 {
+  height: 50px;
+  width: 100px;
+  margin-bottom: -10px;
+}
+.global-heading {
+  margin-left: 50px;
+}
+.self-align {
+  align-self: center;
+}
+@media screen and (max-width:768px){
+  .logo1{
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .pdf-headerr {
+    padding-left: 0px;
+    padding-right: 5px;
+  }
+  .logo1 {
+    height: 60px;
+    width: 100px;
+  }
+  .global-heading {
+    margin-left: 5px;
+  }
+  .self-align {
+  }
+  .pdf-headerr p {
+    font-size: 8px;
+  }
+  .pdf-headerr h2 {
+    font-size: 16px;
+  }
+  .anchor {
+    font-size: 8px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .logo1 {
+    height: 40px;
+    width: 80px;
+  }
+  .pdf-headerr h2 {
+    font-size: 13px;
+  }
+}
