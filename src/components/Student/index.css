@@ -9,8 +9,13 @@
   color: "#010000";
 }
 iframe {
-  min-height: 100vh;
+  height: 65vh;
   width: 100%;
+}
+@media screen and (min-height: 1100px) {
+  iframe {
+    min-height: 70vh;
+  }
 }
 /* TestInstructions component css */
 .test-instructions {
@@ -160,7 +165,7 @@ iframe {
   align-items: center;
   background-color: #004461;
   color: white;
-  height: 70px;
+  height: 60px;
 }
 .logo-container {
   height: 100%;
@@ -202,10 +207,8 @@ iframe {
   .global-heading {
     margin-left: 5px;
   }
-  .self-align {
-  }
   .pdf-headerr p {
-    font-size: 8px;
+    font-size: 10px;
   }
   .pdf-headerr h2 {
     font-size: 16px;
@@ -215,11 +218,19 @@ iframe {
     margin-left: 5px;
   }
 }
+@media screen and (max-width: 500px) {
+  .pdf-headerr p {
+    font-size: 8px;
+  }
+}
 
 @media screen and (max-width: 300px) {
   .logo1 {
     height: 40px;
     width: 80px;
+  }
+  .pdf-headerr p {
+    font-size: 6px;
   }
   .pdf-headerr h2 {
     font-size: 13px;

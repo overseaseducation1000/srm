@@ -1,6 +1,7 @@
 // Test Component used to get the google form to take the test
 import React, { useState } from "react";
 import Footer from "../Footer/Footer";
+import Logo from "../../Logo.png";
 import "./index.css";
 
 const Test = () => {
@@ -18,12 +19,8 @@ const Test = () => {
     >
       <div className="pdf-headerr">
         {/* logo and after clicking this logo, it'll navigates to home route*/}
-        <div className="logo-container" style={{ height: "60px" }}>
-          <img
-            src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1690181828/Logo_Final_1_kyeyii.png"
-            alt="logo"
-            className="logo"
-          />
+        <div className="logo-container">
+          <img src={Logo} alt="logo" className="logo1" />
           <a
             href="http://www.overseaseducation.net"
             target="_blank"
@@ -50,7 +47,7 @@ const Test = () => {
           Loading…
         </iframe>
       </div>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: "100%", position: "absolute", bottom: "0px" }}>
         <Footer />
       </div>
     </div>

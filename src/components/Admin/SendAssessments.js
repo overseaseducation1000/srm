@@ -50,11 +50,11 @@ function SendAssessments(props) {
       // for txt file extension
       if (fileExtension === "txt") {
         const emailList = fileContents
-          .split("\n")
+          .split(" ")
           .map(
             (row) =>
               row
-                .split(" ")
+                .split(",")
                 .filter((field) =>
                   /^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gim.test(
                     field
@@ -148,9 +148,11 @@ function SendAssessments(props) {
     ) {
       // send mail using mailto for uploaded document
       const fromAddress = "overseaseducation1000@gmail.com";
-      window.location.href =
+      window.open(
         `mailto:overseaseducation1000@gmail.com?bcc=${allMails}&subject=${subject}&body=${body}` +
-        `&from=${encodeURIComponent(fromAddress)}`;
+          `&from=${encodeURIComponent(fromAddress)}`,
+        "_blank"
+      );
       // takes all input mails given by admin and send mails
     } else if (mailSentType === "manual") {
       const modifiedEmailAddresses = allMails // removes extra spaces and and extra commas
@@ -159,7 +161,10 @@ function SendAssessments(props) {
         .replace(/,,/, ",");
       console.log(modifiedEmailAddresses);
       // send mail using emailjs for manually entered mails
-      window.location.href = `mailto:overseaseducation1000@gmail.com?bcc=${modifiedEmailAddresses}&subject=${subject}&body=${body}`;
+      window.open(
+        `mailto:overseaseducation1000@gmail.com?bcc=${modifiedEmailAddresses}&subject=${subject}&body=${body}`,
+        "_blank"
+      );
     } else {
       alert("file format was not supported");
     }

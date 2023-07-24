@@ -7,6 +7,7 @@ import {
   CartesianGrid,
   XAxis,
   YAxis,
+  Legend,
 } from "recharts";
 //import "./index.css";
 
@@ -122,41 +123,37 @@ const PdfContent = ({ streamsContent, data }) => {
         <h5>
           <b>Student Stream Recommendation Rank:</b>
         </h5>
+
         <div
+          style={{ marginLeft: "100px" }}
           className="barchart-table-container"
-          style={{ marginLeft: "160px" }}
         >
-          {/* bar chart of all streams total scores of stream recommendation test */}
-          <div className="barchart">
-            <BarChart
-              width={450}
-              height={300}
-              data={BarchartData}
-              margin={{
-                top: 30,
-                right: 0,
-                left: 50,
-                bottom: 5,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-              <Bar dataKey="score" fill="green" barSize={30}>
-                {BarchartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % 20]} />
-                ))}
-              </Bar>
-              <XAxis
-                dataKey="name"
-                style={{ fontSize: "10px", fontWeight: "bold" }}
-              />
-              {/* <YAxis
-              type="number"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
-              domain={[0, 20]}
-            /> */}
-            </BarChart>
-          </div>
+          <BarChart
+            width={500}
+            height={300}
+            data={data}
+            margin={{
+              top: 30,
+              right: 0,
+              left: 0,
+              bottom: 10,
+            }}
+          >
+            <CartesianGrid strokeDasharray="3 3" />
+            <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
+            <XAxis
+              dataKey="name"
+              style={{ fontSize: "12px", fontWeight: "bold" }}
+            />
+
+            <Legend
+              wrapperStyle={{ paddingTop: 30 }} // You can adjust the paddingTop to control the space between the chart and the legend
+              verticalAlign="bottom" // Set verticalAlign to "bottom" to move the legend to the bottom
+              height={36}
+            />
+            <Bar dataKey="Aptitude" fill="#8884D8" barSize={30} />
+            <Bar dataKey="Interest" fill="#82CA9D" barSize={30} />
+          </BarChart>
         </div>
 
         <br />

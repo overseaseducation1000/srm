@@ -11,6 +11,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Footer from "../Footer/Footer";
 import { useReactToPrint } from "react-to-print";
+import logo from "../../Logo.png";
 import { useLocation, useNavigate } from "react-router-dom";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 import "./index.css";
@@ -113,7 +114,7 @@ function Chart() {
           <div className="admin-header-logo-container">
             {/* logo */}
             <img
-              src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1690181828/Logo_Final_1_kyeyii.png"
+              src={logo}
               alt="logo"
               className="logo"
               onClick={() => navigate("/")}

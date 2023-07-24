@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Logo from "../../Logo.png";
 import "./index.css";
 
 function Home() {
@@ -24,11 +25,7 @@ function Home() {
           {/* header for desktop  with Logo and components Home, Student and Admin */}
           <div className="headerLogoContainer">
             {/* logo and after clicking this logo, it'll navigates to home route*/}
-            <img
-              src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1690181828/Logo_Final_1_kyeyii.png"
-              alt="logo"
-              className="logo"
-            />
+            <img src={Logo} alt="logo" className="logo" />
             <h6 className="test-heading">Stream Recommendation Test</h6>
           </div>
           <div className="desktopHeaderNavbarContainer">

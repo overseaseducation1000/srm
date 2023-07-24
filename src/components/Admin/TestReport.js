@@ -77,6 +77,61 @@ function TestReport(props) {
       ),
     },
     {
+      field: "View Score",
+      headerName: "View Report",
+      cellClassName: "table-cell",
+      width: 100,
+      headerClassName: "table-header",
+      sortable: false,
+      renderCell: (params) => (
+        <button
+          onClick={() => {
+            navigate("/studentChart", { state: params.row });
+            handleUpdate(params.row);
+          }}
+          style={{
+            padding: "4px",
+            height: "30px",
+            fontSize: "10px",
+            backgroundColor: "#004461",
+            borderRadius: "5px",
+            marginLeft: "10px",
+            color: "#FFFFFF",
+            fontWeight: "bold",
+            border: "none",
+          }}
+        >
+          View Report
+        </button>
+      ),
+    },
+    {
+      field: "View data",
+      headerName: "View Details",
+      width: 100,
+      headerClassName: "table-header",
+      cellClassName: "table-cell",
+      sortable: false,
+      renderCell: (params) => (
+        <button
+          onClick={() => navigate("/studentBarChart", { state: params.row })}
+          style={{
+            padding: "4px",
+            height: "30px",
+            fontSize: "10px",
+            backgroundColor: "#ED2B2A",
+            borderRadius: "5px",
+            marginLeft: "10px",
+            color: "#FFFFFF",
+            fontWeight: "bold",
+            border: "none",
+          }}
+        >
+          View Details
+        </button>
+      ),
+    },
+    {
       field: "Phone_Number",
       headerName: "Phone Number",
       width: 120,
@@ -168,59 +223,6 @@ function TestReport(props) {
       cellClassName: "table-cell",
       width: 100,
       headerClassName: "table-header",
-    },
-    {
-      field: "View Score",
-      headerName: "View Report",
-      cellClassName: "table-cell",
-      width: 100,
-      headerClassName: "table-header",
-      sortable: false,
-      renderCell: (params) => (
-        <button
-          onClick={() => {
-            navigate("/studentChart", { state: params.row });
-            handleUpdate(params.row);
-          }}
-          style={{
-            padding: "4px",
-            height: "30px",
-            fontSize: "10px",
-            backgroundColor: "#004461",
-            borderRadius: "5px",
-            marginLeft: "10px",
-            color: "#FFFFFF",
-            fontWeight: "bold",
-            border: "none",
-          }}
-        >
-          View Report
-        </button>
-      ),
-    },
-    {
-      field: "View data",
-      headerName: "View Details",
-      width: 100,
-      sortable: false,
-      renderCell: (params) => (
-        <button
-          onClick={() => navigate("/studentBarChart", { state: params.row })}
-          style={{
-            padding: "4px",
-            height: "30px",
-            fontSize: "10px",
-            backgroundColor: "#ED2B2A",
-            borderRadius: "5px",
-            marginLeft: "10px",
-            color: "#FFFFFF",
-            fontWeight: "bold",
-            border: "none",
-          }}
-        >
-          View Details
-        </button>
-      ),
     },
   ];
 

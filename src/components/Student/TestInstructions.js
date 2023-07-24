@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import Logo from "../../Logo.png";
 import "./index.css";
 
 const TestInstructions = () => {
@@ -41,11 +42,7 @@ const TestInstructions = () => {
       <div className="pdf-headerr">
         {/* logo and after clicking this logo, it'll navigates to home route*/}
         <div className="logo-container">
-          <img
-            src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1690181828/Logo_Final_1_kyeyii.png"
-            alt="logo"
-            className="logo"
-          />
+          <img src={Logo} alt="logo" className="logo1" />
           <a
             href="http://www.overseaseducation.net"
             target="_blank"
