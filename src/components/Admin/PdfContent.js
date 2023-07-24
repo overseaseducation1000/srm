@@ -61,7 +61,7 @@ const PdfContent = ({ streamsContent, data }) => {
 
       <hr style={{ height: "2px" }} />
       <div style={{ "page-break-after": "always" }}>
-        <h1 className="text-center pb-5">Stream Recommendation Test Report</h1>
+        <h1 className="text-center pb-3">Stream Recommendation Test Report</h1>
         <p className="">
           Selecting a suitable career is the first step for a successful life
           ahead. Career selection can be quiet a challenging task as one is
