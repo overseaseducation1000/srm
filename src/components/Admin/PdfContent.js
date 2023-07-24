@@ -84,9 +84,7 @@ const PdfContent = ({ streamsContent, data }) => {
           themselves with confidence and clarity.
         </p>
         <br />
-        <h5>
-          <b>Student Stream Recommendation Rank:</b>
-        </h5>
+
         <div>
           <table border="2px">
             <thead>
@@ -119,7 +117,9 @@ const PdfContent = ({ streamsContent, data }) => {
             </tbody>
           </table>
         </div>
-
+        <h5>
+          <b>Student Stream Recommendation Rank:</b>
+        </h5>
         <div
           className="barchart-table-container"
           style={{ marginLeft: "160px" }}
