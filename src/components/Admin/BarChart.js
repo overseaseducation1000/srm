@@ -150,7 +150,7 @@ function StudentBarChart() {
           <div className="admin-header-logo-container">
             {/* logo */}
             <img
-              src="https://res.cloudinary.com/dql3ac9hr/image/upload/v1690088785/Logo_Final_mzjyjx.png"
+              src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1690181828/Logo_Final_1_kyeyii.png"
               alt="logo"
               className="logo"
               onClick={() => navigate("/")}

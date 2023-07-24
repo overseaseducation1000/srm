@@ -53,7 +53,13 @@ function SendAssessments(props) {
           .split(" ")
           .map(
             (row) =>
-              row.split(",").filter((field) => (/^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gi.test(field))) // reads the txt file and filters all the emails
+              row
+                .split(",")
+                .filter((field) =>
+                  /^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gim.test(
+                    field
+                  )
+                ) // reads the txt file and filters all the emails
           )
           .filter((row) => row.length > 0);
         const mails = emailList.join(","); // changes the emails list to comma(,) separated string
@@ -66,7 +72,13 @@ function SendAssessments(props) {
         const sheet = workbook.Sheets[sheetName];
         const data = utils.sheet_to_json(sheet, { header: 1 });
         const filteredData = data
-          .map((row) => row.filter((field) => (/^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gi.test(field)))) // filters all the mails
+          .map((row) =>
+            row.filter((field) =>
+              /^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gim.test(
+                field
+              )
+            )
+          ) // filters all the mails
           .filter((row) => row.length > 0);
         const emailList = filteredData.flat().join(","); //change the mail list to string
         console.log(emailList);
@@ -82,7 +94,13 @@ function SendAssessments(props) {
           .split(" ")
           .map(
             (row) =>
-              row.split(",").filter((field) => (/^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gi.test(field))) // filters all the mails
+              row
+                .split(",")
+                .filter((field) =>
+                  /^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gim.test(
+                    field
+                  )
+                ) // filters all the mails
           )
           .filter((row) => row.length > 0);
         const mails = emailList.join(","); // changes the mail list into comma separated string
