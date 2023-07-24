@@ -85,7 +85,7 @@ const PdfContent = ({ streamsContent, data }) => {
         </p>
         <br />
         <h5>
-          <b>Table of Aptitude and Interest in each of the four streams</b>
+          <b>Table of Aptitude and Interest in each of the four streams :</b>
         </h5>
         <div>
           <table border="2px">
