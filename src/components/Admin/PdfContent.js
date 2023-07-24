@@ -159,7 +159,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All right reserved.
+          Consultants. All rights reserved.
         </p>
       </div>
       <div style={{ "page-break-after": "always" }}>
@@ -249,7 +249,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All right reserved.
+          Consultants. All rights reserved.
         </p>
       </div>
       {/* <br />
@@ -366,7 +366,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All right reserved.
+          Consultants. All rights reserved.
         </p>
       </div>
 
@@ -488,7 +488,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All right reserved.
+          Consultants. All rights reserved.
         </p>
       </div>
       <br />
@@ -545,7 +545,7 @@ const PdfContent = ({ streamsContent, data }) => {
 
         <p style={{ marginTop: "595px" }}>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All right reserved.
+          Consultants. All rights reserved.
         </p>
       </div>
     </div>

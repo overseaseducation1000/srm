@@ -1,11 +1,12 @@
 .main {
-  background-color: #010000;
   font-family: -apple-system, BlinkMacSystemFont, "Droid Sans", "Fira Sans",
     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue",
     sans-serif;
+  background-color: #004461;
 }
 .footer-main-container {
-  min-height: 10vh;
+  background-color: #004461;
+  min-height: 0vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +26,7 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  background-color: #010000;
+  background-color: #004461;
   color: #ffffff;
 }
 a {

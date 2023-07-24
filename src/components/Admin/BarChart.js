@@ -441,12 +441,12 @@ function StudentBarChart() {
               </div> */}
             </div>
           </div>
-          <div>
+          {/* <div>
             <p className="copyright">
               @{new Date().getFullYear()} Study Global OverSeas Education
               Consultants. All right reserved.
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="barchart-buttons-container">
           {/* By clicking Download button, pdf with student data can be dowloaded */}

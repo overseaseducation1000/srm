@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="sb__footer-copyright">
           <p>
             @{new Date().getFullYear()} STUDY GLOBAL{" "}
-            <span> Overseas Education Consultants.</span> All right reserved.
+            <span> Overseas Education Consultants.</span> All rights reserved.
           </p>
         </div>
         <div className="sb__footer-below-links">

@@ -183,6 +183,9 @@ function SendAssessments(props) {
       navigate("/notFound");
     }
   }, []);
+
+  console.log(allMails);
+
   return (
     <div onClick={changeCursor} style={{ cursor: cursor }}>
       <div className="cards-container">
