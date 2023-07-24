@@ -160,7 +160,7 @@ iframe {
   align-items: center;
   background-color: #004461;
   color: white;
-  height: 60px;
+  height: 70px;
 }
 .logo-container {
   height: 100%;
@@ -185,8 +185,8 @@ iframe {
 .self-align {
   align-self: center;
 }
-@media screen and (max-width:768px){
-  .logo1{
+@media screen and (max-width: 768px) {
+  .logo1 {
     margin-bottom: 5px;
   }
 }

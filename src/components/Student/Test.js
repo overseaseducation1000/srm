@@ -18,11 +18,11 @@ const Test = () => {
     >
       <div className="pdf-headerr">
         {/* logo and after clicking this logo, it'll navigates to home route*/}
-        <div className="logo-container">
+        <div className="logo-container" style={{ height: "60px" }}>
           <img
-            src="https://res.cloudinary.com/dhbmdoldt/image/upload/v1689847916/Logo_ForDark-BG_tfgmpi.png"
+            src="https://res.cloudinary.com/dql3ac9hr/image/upload/v1690088785/Logo_Final_mzjyjx.png"
             alt="logo"
-            className="logo1"
+            className="logo"
           />
           <a
             href="http://www.overseaseducation.net"
@@ -36,7 +36,7 @@ const Test = () => {
         <div className="self-align">
           <p>
             <br />
-            <b>Email : jivanishahina@gmail.com</b>
+            <b>Email : overseaseducation1000@gmail.com</b>
             <br />
             <b>Phone : </b>9999999999
           </p>
@@ -50,8 +50,8 @@ const Test = () => {
           Loading…
         </iframe>
       </div>
-      <div style={{width:'100%'}}>
-      <Footer />
+      <div style={{ width: "100%" }}>
+        <Footer />
       </div>
     </div>
   );

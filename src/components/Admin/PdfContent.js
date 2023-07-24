@@ -46,12 +46,10 @@ const PdfContent = ({ streamsContent, data }) => {
           />
           <br />
         </div>
-        <h1 style={{ alignSelf: "center" }}>
-          <b>Study Global</b>
-        </h1>
+        <h1 style={{ alignSelf: "center" }}>Study Global</h1>
         <div style={{ alignSelf: "center" }}>
           <p>
-            <b>Email : </b>jivanishahina@gmail.com
+            <b>Email : </b>overseaseducation1000@gmail.com
             <br />
             <b>Phone : </b>9999999999
           </p>
@@ -86,39 +84,6 @@ const PdfContent = ({ streamsContent, data }) => {
           themselves with confidence and clarity.
         </p>
         <br />
-
-        <div>
-          <table border="2px">
-            <thead>
-              <tr>
-                <th>Stream</th>
-                <th>Aptitude</th>
-                <th>Interest</th>
-              </tr>
-            </thead>
-            <tbody>
-              {streamsContent.map((item, index) => (
-                <tr key={index}>
-                  <td>{item[0]}</td>
-                  <td>
-                    {item[1] >= 0 && item[1] < 2
-                      ? "Low"
-                      : item[1] > 1 && item[1] < 4
-                      ? "Medium"
-                      : "High"}
-                  </td>
-                  <td>
-                    {item[2] >= 0 && item[2] < 6
-                      ? "Low"
-                      : item[2] > 5 && item[2] < 11
-                      ? "Medium"
-                      : "High"}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
 
         <h5>
           <b>Student Stream Recommendation Rank:</b>
@@ -159,9 +124,44 @@ const PdfContent = ({ streamsContent, data }) => {
             </BarChart>
           </div>
         </div>
+
+        <div>
+          <table border="2px">
+            <thead>
+              <tr>
+                <th>Stream</th>
+                <th>Aptitude</th>
+                <th>Interest</th>
+              </tr>
+            </thead>
+            <tbody>
+              {streamsContent.map((item, index) => (
+                <tr key={index}>
+                  <td>{item[0]}</td>
+                  <td>
+                    {item[1] >= 0 && item[1] < 2
+                      ? "Low"
+                      : item[1] > 1 && item[1] < 4
+                      ? "Medium"
+                      : "High"}
+                  </td>
+                  <td>
+                    {item[2] >= 0 && item[2] < 6
+                      ? "Low"
+                      : item[2] > 5 && item[2] < 11
+                      ? "Medium"
+                      : "High"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <br />
         <p>
-          @{new Date().getFullYear()} Study Global OverSeas Education Consultants. All right reserved.
+          @{new Date().getFullYear()} Study Global OverSeas Education
+          Consultants. All right reserved.
         </p>
       </div>
       <div style={{ "page-break-after": "always" }}>
@@ -250,7 +250,8 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <br />
         <p>
-          @{new Date().getFullYear()} Study Global OverSeas Education Consultants. All right reserved.
+          @{new Date().getFullYear()} Study Global OverSeas Education
+          Consultants. All right reserved.
         </p>
       </div>
       {/* <br />
@@ -366,7 +367,8 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <br />
         <p>
-          @{new Date().getFullYear()} Study Global OverSeas Education Consultants. All right reserved.
+          @{new Date().getFullYear()} Study Global OverSeas Education
+          Consultants. All right reserved.
         </p>
       </div>
 
@@ -487,7 +489,8 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <br />
         <p>
-          @{new Date().getFullYear()} Study Global OverSeas Education Consultants. All right reserved.
+          @{new Date().getFullYear()} Study Global OverSeas Education
+          Consultants. All right reserved.
         </p>
       </div>
       <br />
@@ -526,15 +529,15 @@ const PdfContent = ({ streamsContent, data }) => {
               </tr>
 
               <tr>
-                <td>BA-History</td>
+                <td>BA-Languages</td>
                 <td>Bachelor of Design (B.Des)-Fashion Design</td>
               </tr>
               <tr>
-                <td>BA-Geography</td>
+                <td>BA-Social Science</td>
                 <td>Bachelor of Design (B.Des)-Interior design</td>
               </tr>
               <tr>
-                <td>Architecture (12 Th with Math)</td>
+                <td>Fine Arts</td>
                 <td>Bachelor of Design (B.Des)-Jewellery Design </td>
               </tr>
             </tbody>
@@ -543,7 +546,8 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
 
         <p style={{ marginTop: "595px" }}>
-          @{new Date().getFullYear()} Study Global OverSeas Education Consultants. All right reserved.
+          @{new Date().getFullYear()} Study Global OverSeas Education
+          Consultants. All right reserved.
         </p>
       </div>
     </div>
