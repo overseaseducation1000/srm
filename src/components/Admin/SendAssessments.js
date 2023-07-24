@@ -50,11 +50,11 @@ function SendAssessments(props) {
       // for txt file extension
       if (fileExtension === "txt") {
         const emailList = fileContents
-          .split(" ")
+          .split("\n")
           .map(
             (row) =>
               row
-                .split(",")
+                .split(" ")
                 .filter((field) =>
                   /^[^\s@]+@[a-z]+(.ac|.edu|.gov|.mil|)+(.com|.in|.net|.org|.co|)+(.au|.us|.uk|)$/gim.test(
                     field
