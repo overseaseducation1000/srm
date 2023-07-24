@@ -84,10 +84,42 @@ const PdfContent = ({ streamsContent, data }) => {
           themselves with confidence and clarity.
         </p>
         <br />
-
         <h5>
           <b>Student Stream Recommendation Rank:</b>
         </h5>
+        <div>
+          <table border="2px">
+            <thead>
+              <tr>
+                <th>Stream</th>
+                <th>Aptitude</th>
+                <th>Interest</th>
+              </tr>
+            </thead>
+            <tbody>
+              {streamsContent.map((item, index) => (
+                <tr key={index}>
+                  <td>{item[0]}</td>
+                  <td>
+                    {item[1] >= 0 && item[1] < 2
+                      ? "Low"
+                      : item[1] > 1 && item[1] < 4
+                      ? "Medium"
+                      : "High"}
+                  </td>
+                  <td>
+                    {item[2] >= 0 && item[2] < 6
+                      ? "Low"
+                      : item[2] > 5 && item[2] < 11
+                      ? "Medium"
+                      : "High"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         <div
           className="barchart-table-container"
           style={{ marginLeft: "160px" }}
@@ -123,39 +155,6 @@ const PdfContent = ({ streamsContent, data }) => {
             /> */}
             </BarChart>
           </div>
-        </div>
-
-        <div>
-          <table border="2px">
-            <thead>
-              <tr>
-                <th>Stream</th>
-                <th>Aptitude</th>
-                <th>Interest</th>
-              </tr>
-            </thead>
-            <tbody>
-              {streamsContent.map((item, index) => (
-                <tr key={index}>
-                  <td>{item[0]}</td>
-                  <td>
-                    {item[1] >= 0 && item[1] < 2
-                      ? "Low"
-                      : item[1] > 1 && item[1] < 4
-                      ? "Medium"
-                      : "High"}
-                  </td>
-                  <td>
-                    {item[2] >= 0 && item[2] < 6
-                      ? "Low"
-                      : item[2] > 5 && item[2] < 11
-                      ? "Medium"
-                      : "High"}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
 
         <br />
