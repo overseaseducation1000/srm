@@ -567,12 +567,18 @@ th {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: -50px;
+  margin-left: 30px;
 }
 @media screen and (max-width: 767px) {
   .barchart-table-container {
     display: none;
   }
+}
+.barchart-table1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 120px;
 }
 .barchart-table-mobile-container {
   display: none;
@@ -582,7 +588,7 @@ th {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: -50px;
+    margin-left: 30px;
   }
 }
 .barchart {
@@ -646,8 +652,8 @@ td {
   }
 }
 @media screen and (max-width: 430px) {
-  .barchart-table-container {
-    margin-left: 0px;
+  .barchart-table-mobile-container {
+    margin-left: -10px;
   }
   .rank-heading {
     font-size: 25px;
@@ -680,14 +686,13 @@ td {
   }
 }
 @media screen and (max-width: 300px) {
+  .barchart-table-mobile-container {
+    margin-left: 30px;
+  }
   .table-container {
     width: 180px;
     margin-left: 45px;
     margin-right: 10px;
-  }
-  .barchart-table-container {
-    width: 200px;
-    margin-left: 10px;
   }
   .barchart {
     margin-left: -80px;

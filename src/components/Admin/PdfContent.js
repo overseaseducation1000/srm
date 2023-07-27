@@ -47,7 +47,9 @@ const PdfContent = ({ streamsContent, data }) => {
           />
           <br />
         </div>
-        <h1 style={{ alignSelf: "center" }}>Study Global</h1>
+        <h1 style={{ alignSelf: "center" }}>
+          <b>Study Global</b>
+        </h1>
         <div style={{ alignSelf: "center" }}>
           <p>
             <b>Email : </b>overseaseducation1000@gmail.com
@@ -56,13 +58,26 @@ const PdfContent = ({ streamsContent, data }) => {
           </p>
         </div>
       </div>
-      <a target="_blank" href="https://www.overseaseducation.net">
+      <a target="_blank" href="http://www.overseaseducation.net">
         www.overseaseducation.net
       </a>
 
       <hr style={{ height: "2px" }} />
       <div style={{ "page-break-after": "always" }}>
-        <h1 className="text-center pb-3">Stream Recommendation Test Report</h1>
+        <div className="barchart-student-container">
+          <h1 className="student-details-heading">Student Details</h1>
+          <div className="barchart-student-details-container">
+            <div className="barchart-student-details">
+              <p>Name : {data.Full_Name} </p>
+              <p>Test Completed On : {data.Timestamp}</p>
+            </div>
+            <div className="barchart-student-details">
+              <p>Email Address : {data.Email_Address} </p>
+              <p>Phone Number : {data.Phone_Number}</p>
+            </div>
+          </div>
+        </div>
+        <h1 className="text-center">Stream Recommendation Test Report</h1>
         <p className="">
           Selecting a suitable career is the first step for a successful life
           ahead. Career selection can be quiet a challenging task as one is
@@ -85,10 +100,8 @@ const PdfContent = ({ streamsContent, data }) => {
           themselves with confidence and clarity.
         </p>
         <br />
-        <h5>
-          <b>Table of Aptitude and Interest in each of the four streams :</b>
-        </h5>
-        <div>
+
+        {/* <div>
           <table border="2px">
             <thead>
               <tr>
@@ -119,47 +132,72 @@ const PdfContent = ({ streamsContent, data }) => {
               ))}
             </tbody>
           </table>
-        </div>
+        </div> */}
+
         <h5>
           <b>Student Stream Recommendation Rank:</b>
         </h5>
-
-        <div
-          style={{ marginLeft: "100px" }}
-          className="barchart-table-container"
-        >
-          <BarChart
-            width={500}
-            height={300}
-            data={data}
+        <div className="barchart-table1-container">
+          {/* <BarChart width={450} height={300} data={data}
             margin={{
               top: 30,
               right: 0,
               left: 0,
-              bottom: 10,
-            }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-            <XAxis
-              dataKey="name"
-              style={{ fontSize: "12px", fontWeight: "bold" }}
-            />
-
-            <Legend
-              wrapperStyle={{ paddingTop: 30 }} // You can adjust the paddingTop to control the space between the chart and the legend
-              verticalAlign="bottom" // Set verticalAlign to "bottom" to move the legend to the bottom
-              height={36}
-            />
-            <Bar dataKey="Aptitude" fill="#8884D8" barSize={30} />
-            <Bar dataKey="Interest" fill="#82CA9D" barSize={30} />
-          </BarChart>
+              bottom: 5,
+            }}>
+            <CartesianGrid strokeDasharray='3 3' />
+                  <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
+                  <XAxis
+                    dataKey='name'
+                    style={{fontSize: "12px", fontWeight: "bold" }}
+                  />
+                  <YAxis
+                    type='number'
+                    style={{ fontSize: "15px", fontWeight: "bold" }}
+                    domain={[0, 15]}
+                  />
+                  <Legend />
+            <Bar dataKey="Aptitude" fill="#8884d8" barSize={30} />
+            <Bar dataKey="Interest" fill="#82ca9d" barSize={30}/>
+          </BarChart> */}
+          <div className="barchart-table1-container">
+            {/* bar chart of all streams total scores of stream recommendation test */}
+            <div className="barchart">
+              <BarChart
+                width={400}
+                height={280}
+                data={BarchartData}
+                margin={{
+                  top: 30,
+                  right: 0,
+                  left: 0,
+                  bottom: 5,
+                }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
+                <Bar dataKey="score" fill="green" barSize={30}>
+                  {BarchartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={COLORS[index % 20]} />
+                  ))}
+                </Bar>
+                <XAxis
+                  dataKey="name"
+                  style={{ fontSize: "8px", fontWeight: "bold" }}
+                />
+                {/* <YAxis
+                    type='number'
+                    style={{ fontSize: "15px", fontWeight: "bold" }}
+                    domain={[0, 20]}
+                  /> */}
+              </BarChart>
+            </div>
+          </div>
         </div>
-
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All rights reserved.
+          Consultants. All right reserved.
         </p>
       </div>
       <div style={{ "page-break-after": "always" }}>
@@ -249,7 +287,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All rights reserved.
+          Consultants. All right reserved.
         </p>
       </div>
       {/* <br />
@@ -261,7 +299,10 @@ const PdfContent = ({ streamsContent, data }) => {
       <br />
       <br />
       <div style={{ "page-break-after": "always" }}>
-        <h2>Popular Courses after 12 th :</h2>
+        <h2>
+          Popular Courses after 12
+          <sup>th</sup> :
+        </h2>
         <br />
 
         <h4 className="text-center">
@@ -366,7 +407,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All rights reserved.
+          Consultants. All right reserved.
         </p>
       </div>
 
@@ -488,7 +529,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All rights reserved.
+          Consultants. All right reserved.
         </p>
       </div>
       <br />
@@ -527,15 +568,15 @@ const PdfContent = ({ streamsContent, data }) => {
               </tr>
 
               <tr>
-                <td>BA-Languages</td>
+                <td>BA-History</td>
                 <td>Bachelor of Design (B.Des)-Fashion Design</td>
               </tr>
               <tr>
-                <td>BA-Social Science</td>
+                <td>BA-Geography</td>
                 <td>Bachelor of Design (B.Des)-Interior design</td>
               </tr>
               <tr>
-                <td>Fine Arts</td>
+                <td>Architecture (12 Th with Math)</td>
                 <td>Bachelor of Design (B.Des)-Jewellery Design </td>
               </tr>
             </tbody>
@@ -545,7 +586,7 @@ const PdfContent = ({ streamsContent, data }) => {
 
         <p style={{ marginTop: "595px" }}>
           @{new Date().getFullYear()} Study Global OverSeas Education
-          Consultants. All rights reserved.
+          Consultants. All right reserved.
         </p>
       </div>
     </div>

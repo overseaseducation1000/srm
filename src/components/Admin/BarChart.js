@@ -2,6 +2,7 @@
 // import react, jspdf, @emailjs/browser, react-bootstrap, react-to-print, react-router-dom, recharts and css files index.css, bootstrap/dist/css/bootstrap.min.css to render BarChart component
 import React, { useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Logo from "../../Logo.png";
 import jsPDF from "jspdf";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -13,7 +14,6 @@ import Button from "react-bootstrap/Button";
 import Footer from "../Footer/Footer";
 import { useReactToPrint } from "react-to-print";
 import { useLocation, useNavigate } from "react-router-dom";
-import Logo from "../../Logo.png";
 import "./index.css";
 import PdfContent from "./PdfContent";
 
@@ -75,7 +75,6 @@ function StudentBarChart() {
       data.science_math_interests_score,
     ],
   ];
-
   const datab = [
     {
       name: "Humanities",
@@ -238,7 +237,7 @@ function StudentBarChart() {
         </div>
         {/* table with low, medium and high interest of all streams aptitude and interest scores data */}
         <div ref={detailsPdf} className="pdf-only">
-          <PdfContent streamsContent={streams} data={datab} />
+          <PdfContent streamsContent={streams} data={data} />
         </div>
         <div>
           <h1 className="rank-heading">Stream Recommendation</h1>
@@ -323,36 +322,32 @@ function StudentBarChart() {
               All streams Total Score Bar Chart
             </h1>
             <div className="barchart-table-container">
-              <BarChart
-                width={450}
-                height={300}
-                data={datab}
-                margin={{
-                  top: 30,
-                  right: 0,
-                  left: 0,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-                <XAxis
-                  dataKey="name"
-                  style={{ fontSize: "12px", fontWeight: "bold" }}
-                />
-                <YAxis
-                  type="number"
-                  style={{ fontSize: "15px", fontWeight: "bold" }}
-                  domain={[0, 15]}
-                />
-                <Legend />
-                <Bar dataKey="Aptitude" fill="#8884D8" barSize={30} />
-                <Bar dataKey="Interest" fill="#82CA9D" barSize={30} />
-              </BarChart>
+              {/* <BarChart width={450} height={300} data={datab}
+            margin={{
+              top: 30,
+              right: 0,
+              left: 0,
+              bottom: 5,
+            }}>
+            <CartesianGrid strokeDasharray='3 3' />
+                  <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
+                  <XAxis
+                    dataKey='name'
+                    style={{fontSize: "12px", fontWeight: "bold" }}
+                  />
+                  <YAxis
+                    type='number'
+                    style={{ fontSize: "15px", fontWeight: "bold" }}
+                    domain={[0, 15]}
+                  />
+                  <Legend />
+            <Bar dataKey="Aptitude" fill="#8884d8" barSize={30} />
+            <Bar dataKey="Interest" fill="#82ca9d" barSize={30}/>
+               </BarChart> */}
               {/* bar chart of all streams total scores of stream recommendation test */}
-              {/* <div className='barchart'>
+              <div className="barchart">
                 <BarChart
-                  width={300}
+                  width={400}
                   height={300}
                   data={BarchartData}
                   margin={{
@@ -362,54 +357,50 @@ function StudentBarChart() {
                     bottom: 5,
                   }}
                 >
-                  <CartesianGrid strokeDasharray='3 3' />
+                  <CartesianGrid strokeDasharray="3 3" />
                   <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-                  <Bar dataKey='score' fill='green' barSize={30}>
+                  <Bar dataKey="score" fill="green" barSize={30}>
                     {BarchartData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % 20]} />
                     ))}
                   </Bar>
                   <XAxis
-                    dataKey='name'
+                    dataKey="name"
                     style={{ fontSize: "8px", fontWeight: "bold" }}
                   />
                   <YAxis
-                    type='number'
+                    type="number"
                     style={{ fontSize: "15px", fontWeight: "bold" }}
                     domain={[0, 20]}
                   />
                 </BarChart>
-              </div> */}
+              </div>
             </div>
             <div className="barchart-table-mobile-container">
-              <BarChart
-                width={310}
-                height={300}
-                data={datab}
-                margin={{
-                  top: 30,
-                  right: 0,
-                  left: 0,
-                  bottom: 5,
-                }}
-              >
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-                <XAxis
-                  dataKey="name"
-                  style={{ fontSize: "8px", fontWeight: "bold" }}
-                />
-                <YAxis
-                  type="number"
-                  style={{ fontSize: "13px", fontWeight: "bold" }}
-                  domain={[0, 15]}
-                />
-                <Legend />
-                <Bar dataKey="Aptitude" fill="#8884D8" barSize={20} />
-                <Bar dataKey="Interest" fill="#82CA9D" barSize={20} />
-              </BarChart>
+              {/* <BarChart width={310} height={300} data={datab}
+            margin={{
+              top: 30,
+              right: 0,
+              left: 0,
+              bottom: 5,
+            }}>
+            <CartesianGrid strokeDasharray='3 3' />
+                  <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
+                  <XAxis
+                    dataKey='name'
+                    style={{fontSize: "8px", fontWeight: "bold" }}
+                  />
+                  <YAxis
+                    type='number'
+                    style={{ fontSize: "13px", fontWeight: "bold" }}
+                    domain={[0, 15]}
+                  />
+                  <Legend />
+            <Bar dataKey="Aptitude" fill="#8884d8" barSize={20} />
+            <Bar dataKey="Interest" fill="#82ca9d" barSize={20}/>
+          </BarChart> */}
               {/* bar chart of all streams total scores of stream recommendation test */}
-              {/* <div className='barchart'>
+              <div className="barchart">
                 <BarChart
                   width={300}
                   height={300}
@@ -421,32 +412,26 @@ function StudentBarChart() {
                     bottom: 5,
                   }}
                 >
-                  <CartesianGrid strokeDasharray='3 3' />
+                  <CartesianGrid strokeDasharray="3 3" />
                   <Tooltip wrapperStyle={{ top: 0, left: 0 }} />
-                  <Bar dataKey='score' fill='green' barSize={30}>
+                  <Bar dataKey="score" fill="green" barSize={30}>
                     {BarchartData.map((entry, index) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % 20]} />
                     ))}
                   </Bar>
                   <XAxis
-                    dataKey='name'
+                    dataKey="name"
                     style={{ fontSize: "8px", fontWeight: "bold" }}
                   />
                   <YAxis
-                    type='number'
+                    type="number"
                     style={{ fontSize: "15px", fontWeight: "bold" }}
                     domain={[0, 20]}
                   />
                 </BarChart>
-              </div> */}
+              </div>
             </div>
           </div>
-          {/* <div>
-            <p className="copyright">
-              @{new Date().getFullYear()} Study Global OverSeas Education
-              Consultants. All right reserved.
-            </p>
-          </div> */}
         </div>
         <div className="barchart-buttons-container">
           {/* By clicking Download button, pdf with student data can be dowloaded */}
