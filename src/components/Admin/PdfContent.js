@@ -299,10 +299,7 @@ const PdfContent = ({ streamsContent, data }) => {
       <br />
       <br />
       <div style={{ "page-break-after": "always" }}>
-        <h2>
-          Popular Courses after 12
-          <sup>th</sup> :
-        </h2>
+        <h2>Popular Courses after 12th :</h2>
         <br />
 
         <h4 className="text-center">
@@ -444,7 +441,7 @@ const PdfContent = ({ streamsContent, data }) => {
                 <td>B.SC Physics </td>
               </tr>
               <tr>
-                <td>ENGINEERING-industrial</td>
+                <td>ENGINEERING-Industrial</td>
                 <td>B.SC Chemistry </td>
               </tr>
               <tr>
@@ -453,7 +450,7 @@ const PdfContent = ({ streamsContent, data }) => {
               </tr>
               <tr>
                 <td>ENGINEERING-Mining</td>
-                <td>B.SC Math/Computer </td>
+                <td>B.SC Math/Computers </td>
               </tr>
               <tr>
                 <td>Nautical Science</td>
@@ -466,7 +463,7 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
 
         <h4 className="text-center">
-          <b>Humanities (ARTS):</b>
+          <b>Humanities (Arts):</b>
         </h4>
         <br />
         <div className="">
@@ -503,7 +500,7 @@ const PdfContent = ({ streamsContent, data }) => {
                 <td>Photography </td>
               </tr>
               <tr>
-                <td>BA-political Science</td>
+                <td>BA-Political Science</td>
                 <td>Animation</td>
               </tr>
               <tr>
@@ -519,7 +516,7 @@ const PdfContent = ({ streamsContent, data }) => {
                 <td>Bachelor of Design (B.Des)-Interior design</td>
               </tr>
               <tr>
-                <td>Architecture (12 Th with Math)</td>
+                <td>Architecture (12th with Math)</td>
                 <td>Bachelor of Design (B.Des)-Jewellery Design </td>
               </tr>
             </tbody>
@@ -537,7 +534,7 @@ const PdfContent = ({ streamsContent, data }) => {
       <br />
       <div style={{ "page-break-after": "always" }}>
         <h4 className="text-center">
-          <b>Courses That Can be Pursued from all Streams:</b>
+          <b>Courses that can be pursued from all streams:</b>
         </h4>
         <br />
 
@@ -568,15 +565,15 @@ const PdfContent = ({ streamsContent, data }) => {
               </tr>
 
               <tr>
-                <td>BA-History</td>
+                <td>BA-languages</td>
                 <td>Bachelor of Design (B.Des)-Fashion Design</td>
               </tr>
               <tr>
-                <td>BA-Geography</td>
+                <td>BA-Social Science</td>
                 <td>Bachelor of Design (B.Des)-Interior design</td>
               </tr>
               <tr>
-                <td>Architecture (12 Th with Math)</td>
+                <td>Fine Arts</td>
                 <td>Bachelor of Design (B.Des)-Jewellery Design </td>
               </tr>
             </tbody>
