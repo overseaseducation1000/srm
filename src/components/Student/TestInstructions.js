@@ -78,6 +78,9 @@ const TestInstructions = () => {
               <li>
                 Close any unnecessary applications or tabs on your computer.
               </li>
+              <li>
+                You need to sign in with your Gmail account to give the test.
+              </li>
               <li>Answer each question to the best of your ability.</li>
               <li>
                 Once you have completed the test, carefully review your answers
