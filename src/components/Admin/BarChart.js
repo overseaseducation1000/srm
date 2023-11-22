@@ -446,6 +446,7 @@ function StudentBarChart() {
             </button>
             {/* By clicking the Send Email button, the boolean value of isOpen will be changed */}
             <button
+              disabled="true"
               style={{ backgroundColor: "darkgrey" }}
               onClick={() => sendMail(data)}
               className="send-btn"

@@ -244,6 +244,7 @@ function Chart() {
             </button>
             {/* send email button to send the score card through email*/}
             <button
+              disabled="true"
               style={{
                 backgroundColor: "darkgrey",
               }}
