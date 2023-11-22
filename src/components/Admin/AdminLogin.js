@@ -14,6 +14,8 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Logo from "../../Logo.png";
 import "./AdminLogin.css";
+import googleImage from "../Assets/images/7123025_logo_google_g_icon.png";
+
 // scopes variable is a google api to get access of google spreadsheets
 const SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
@@ -469,10 +471,7 @@ const AdminLogin = () => {
             <h2>Login With Google</h2>
             {/* if admin clicks this button, he can sign in into his account and get access for all routes */}
             <button onClick={handleSignIn} className="google-signin-button">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                alt="Google Logo"
-              />
+              <img src={googleImage} alt="Google Logo" />
               Sign In with Google
             </button>
           </div>
