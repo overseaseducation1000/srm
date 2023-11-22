@@ -10,6 +10,7 @@ import "./index.css";
 function TestReport(props) {
   // location varaiable to get location of the testReport route and state
   const { datat } = props;
+  console.log(datat);
   const location = useLocation();
   // useState of data to store stream recommendation test data responses
   const [data, setData] = useState(
@@ -29,7 +30,7 @@ function TestReport(props) {
   const [startDate, setStartDate] = useState("");
   // startDate usestate to store start date
   const [endDate, setEndDate] = useState("");
-
+  //console.log(filterData, "hello");
   // table data
   const columns = [
     {
@@ -261,7 +262,7 @@ function TestReport(props) {
 
   // filteredData variable used to store all filtered tests data reponses by email id search
   const filteredData = filterData.filter((i) =>
-    i.Email_Address.toLowerCase().includes(search.toLowerCase())
+    i.Email_Address?.toLowerCase().includes(search?.toLowerCase())
   );
 
   // handleUpdate function to update all streams scores to google sheet of stream recommendation Test google sheet using sheet db google api
@@ -315,6 +316,8 @@ function TestReport(props) {
     }
     setFilterData(filteredData);
   }, [search]);
+
+  console.log(filteredData);
 
   return (
     <>
@@ -379,7 +382,7 @@ function TestReport(props) {
         )}
         {/* desktop table container with table of stream recommendation test data respones */}
         <div className="d-none d-lg-block">
-          {filteredData.length > 0 ? (
+          {filterData.length > 0 ? (
             <div style={{ minHeight: 100, width: "95%", margin: "auto" }}>
               <DataGrid
                 rows={filterData}

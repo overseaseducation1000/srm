@@ -107,6 +107,7 @@ const AdminLogin = () => {
             });
             return item;
           });
+          console.log(jsonData);
           // storing stream recommendation test responses data in setStreamData function
           setStreamData(jsonData);
         })

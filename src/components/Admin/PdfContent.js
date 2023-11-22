@@ -195,10 +195,10 @@ const PdfContent = ({ streamsContent, data }) => {
           </div>
         </div>
         <br />
-        <p>
+        {/* <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
           Consultants. All right reserved.
-        </p>
+        </p> */}
       </div>
       <div style={{ "page-break-after": "always" }}>
         <br />
@@ -259,8 +259,9 @@ const PdfContent = ({ streamsContent, data }) => {
             fontStyle: "italic",
           }}
         >
-          <b>Remember:</b> “You can always edit a bad page. You can’t edit a
-          blank page&quot;
+          <b>Remember:</b> “Everybody is a genius.But if you judge a fish by its
+          ability to climb a tree, it will live its whole life believing that it
+          is stupid &quot;
         </p>
         <p
           style={{
@@ -269,7 +270,7 @@ const PdfContent = ({ streamsContent, data }) => {
           }}
           className="text-end"
         >
-          - Jodi Picoult
+          -Albert Einstein
         </p>
         <p>
           The recommendation provided in the report should be taken as a guide
@@ -285,10 +286,10 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <br />
         <br />
-        <p>
+        {/* <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
           Consultants. All right reserved.
-        </p>
+        </p> */}
       </div>
       {/* <br />
       <br />
@@ -402,10 +403,10 @@ const PdfContent = ({ streamsContent, data }) => {
         <br />
         <br />
         <br />
-        <p>
+        {/* <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
           Consultants. All right reserved.
-        </p>
+        </p> */}
       </div>
 
       <br />
@@ -524,10 +525,10 @@ const PdfContent = ({ streamsContent, data }) => {
         </div>
         <br />
         <br />
-        <p>
+        {/* <p>
           @{new Date().getFullYear()} Study Global OverSeas Education
           Consultants. All right reserved.
-        </p>
+        </p> */}
       </div>
       <br />
       <br />
@@ -581,10 +582,10 @@ const PdfContent = ({ streamsContent, data }) => {
         </div>
         <br />
 
-        <p style={{ marginTop: "595px" }}>
+        {/* <p style={{ marginTop: "595px" }}>
           @{new Date().getFullYear()} Study Global OverSeas Education
           Consultants. All right reserved.
-        </p>
+        </p> */}
       </div>
     </div>
   );

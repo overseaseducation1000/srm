@@ -15,10 +15,10 @@ const Footer = () => {
       <hr className="my-hr" />
       <div className="below-container">
         <div className="sb__footer-copyright">
-          <p>
+          {/* <p>
             @{new Date().getFullYear()} STUDY GLOBAL{" "}
             <span> Overseas Education Consultants.</span> All rights reserved.
-          </p>
+          </p> */}
         </div>
         <div className="sb__footer-below-links">
           <a>
