@@ -33,17 +33,9 @@ function Chart() {
   // colors for piechart
   const COLORS = ["#8884d8", "#82ca9d", "#FFBB28", "#FF8042", "#AF19FF"];
   // aptitude score of all streams
-  const aptitude_score =
-    data.humanities_aptitude_score +
-    data.commerce_aptitude_score +
-    data.science_bio_aptitude_score +
-    data.science_math_aptitude_score;
+  const aptitude_score = data.humanities_aptitude_score + data.commerce_aptitude_score + data.science_bio_aptitude_score + data.science_math_aptitude_score;
   // interest score of all streams
-  const interests_score =
-    data.humanities_interests_score +
-    data.commerce_interests_score +
-    data.science_bio_interests_score +
-    data.science_math_interests_score;
+  const interests_score = data.humanities_interests_score + data.commerce_interests_score + data.science_bio_interests_score + data.science_math_interests_score;
   // pieData is pie chart Data of stream recommendation test aptitude and interst scores
   let pieData = [
     {
@@ -66,30 +58,15 @@ function Chart() {
     data.new_Mail = item;
     data.aptitude_score = aptitude_score;
     data.interests_score = interests_score;
-    // emailjs
-    //   .send(
-    //   {
-    //       "service_ymf4cxn",
-    //     "template_r90aam3",
-    //       ...data,
-    //     },
-    //     "l586GhABgihjc8ccg"
-    //   )
-    //   .then((result) => {
-    //     console.log("Email sent successfully:", result.text);
-    //     alert(`Email sent to ${data.Email_Address}`);
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error sending email:", error);
-    //   });
+
     emailjs
       .send(
-      {
-          "service_ktanyur",
-        "template_suf8hwt",
+        "service_ymf4cxn", // Corrected argument structure
+        "template_r90aam3",
+        {
           ...data,
         },
-        "W_yBL44gHUyzQRue3"
+        "l586GhABgihjc8ccg"
       )
       .then((result) => {
         console.log("Email sent successfully:", result.text);
@@ -99,6 +76,7 @@ function Chart() {
         console.error("Error sending email:", error);
       });
   };
+
   // sendMail function used to set boolean value of isOpen variable
   const sendMail = (data) => {
     setIsOpen(!isOpen);
@@ -129,27 +107,16 @@ function Chart() {
         <div className="admin-header-container">
           <div className="admin-header-logo-container">
             {/* logo */}
-            <img
-              src={logo}
-              alt="logo"
-              className="logo"
-              onClick={() => navigate("/")}
-            />
+            <img src={logo} alt="logo" className="logo" onClick={() => navigate("/")} />
             <h6 className="test-heading">Stream Recommendation Test</h6>
           </div>
           <div className="admin-desktop-header-navbar-container">
             {/* when clicking this Home text, it'll navigates to home route*/}
-            <p
-              className="admin-desktop-header-navbar-link"
-              onClick={() => navigate("/")}
-            >
+            <p className="admin-desktop-header-navbar-link" onClick={() => navigate("/")}>
               Home
             </p>
             {/* when clicking this Admin text, it'll navigates to admin login route and again admin can access all routes */}
-            <p
-              className="admin-desktop-header-navbar-link"
-              onClick={() => navigate("/adminLogin")}
-            >
+            <p className="admin-desktop-header-navbar-link" onClick={() => navigate("/adminLogin")}>
               Admin
             </p>
           </div>
@@ -174,17 +141,11 @@ function Chart() {
             >
               <ul className="admin-mobile-hamburger-menu">
                 {/* when clicking this Home text, it'll navigates to home route*/}
-                <li
-                  onClick={() => navigate("/")}
-                  className="admin-header-navbar-link"
-                >
+                <li onClick={() => navigate("/")} className="admin-header-navbar-link">
                   Home
                 </li>
                 {/* when clicking this Admin text, it'll navigates to admin login route and again admin can access all routes */}
-                <li
-                  onClick={() => navigate("/adminLogin")}
-                  className="admin-header-navbar-link"
-                >
+                <li onClick={() => navigate("/adminLogin")} className="admin-header-navbar-link">
                   Admin
                 </li>
               </ul>
@@ -194,9 +155,7 @@ function Chart() {
         {/* student details and piechart */}
         <div ref={detailsPdf} className="charts">
           <div className="details">
-            <h1 style={{ fontSize: "30px", fontWeight: "bold" }}>
-              Student Details:
-            </h1>
+            <h1 style={{ fontSize: "30px", fontWeight: "bold" }}>Student Details:</h1>
             <p>Name : {data.Full_Name}</p>
             <p>Test Completed On : {data.Timestamp}</p>
             <p>Email : {data.Email_Address}</p>
@@ -205,38 +164,14 @@ function Chart() {
             <p>Parent Phone Number :{data.Parent_Phone_Number}</p>
             <p>Total Score : {data.Score}</p>
             <p>Percentage : {data.percentage}</p>
-            <p>
-              Aptitude Score :{" "}
-              {data.humanities_aptitude_score +
-                data.commerce_aptitude_score +
-                data.science_bio_aptitude_score +
-                data.science_math_aptitude_score}
-            </p>
-            <p>
-              Interests Score :{" "}
-              {data.humanities_interests_score +
-                data.commerce_interests_score +
-                data.science_bio_interests_score +
-                data.science_math_interests_score}
-            </p>
+            <p>Aptitude Score : {data.humanities_aptitude_score + data.commerce_aptitude_score + data.science_bio_aptitude_score + data.science_math_aptitude_score}</p>
+            <p>Interests Score : {data.humanities_interests_score + data.commerce_interests_score + data.science_bio_interests_score + data.science_math_interests_score}</p>
           </div>
           <div>
             <PieChart width={280} height={280}>
-              <Pie
-                data={pieData}
-                color="#000000"
-                dataKey="value"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                outerRadius={100}
-                fill="#8884d8"
-              >
+              <Pie data={pieData} color="#000000" dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8">
                 {pieData.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={COLORS[index % COLORS.length]}
-                  />
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
               <Tooltip />
@@ -272,11 +207,7 @@ function Chart() {
           </div>
           {/* clicking view Data button to navigate to studentBarChart route*/}
           <div className="buttons-cont">
-            <button
-              style={{ backgroundColor: "#ED2B2A" }}
-              onClick={() => navigate("/studentBarChart", { state: data })}
-              className="send"
-            >
+            <button style={{ backgroundColor: "#ED2B2A" }} onClick={() => navigate("/studentBarChart", { state: data })} className="send">
               View Details
             </button>
             <button
@@ -302,11 +233,7 @@ function Chart() {
             </Form.Group>
             <Form.Group>
               <Form.Label>CC Mail ID's: </Form.Label>
-              <Form.Control
-                type="text"
-                value={mailId}
-                onChange={(e) => setMailId(e.target.value)}
-              />
+              <Form.Control type="text" value={mailId} onChange={(e) => setMailId(e.target.value)} />
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>
