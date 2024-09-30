@@ -66,14 +66,30 @@ function Chart() {
     data.new_Mail = item;
     data.aptitude_score = aptitude_score;
     data.interests_score = interests_score;
+    // emailjs
+    //   .send(
+    //   {
+    //       "service_ymf4cxn",
+    //     "template_r90aam3",
+    //       ...data,
+    //     },
+    //     "l586GhABgihjc8ccg"
+    //   )
+    //   .then((result) => {
+    //     console.log("Email sent successfully:", result.text);
+    //     alert(`Email sent to ${data.Email_Address}`);
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error sending email:", error);
+    //   });
     emailjs
       .send(
-        "service_ymf4cxn",
-        "template_r90aam3",
-        {
+      {
+          "service_ktanyur",
+        "template_suf8hwt",
           ...data,
         },
-        "l586GhABgihjc8ccg"
+        "W_yBL44gHUyzQRue3"
       )
       .then((result) => {
         console.log("Email sent successfully:", result.text);
