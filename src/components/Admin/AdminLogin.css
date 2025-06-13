@@ -10,13 +10,13 @@
 }
 .test-heading {
   color: #ffffff;
-  font-size: 8px;
+  font-size: 16px;
 }
 .admin-header-container {
   padding-left: 30px;
   background-color: #004461;
   color: white;
-  height: 80px;
+  height: 117px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -168,4 +168,5 @@
   border-radius: 8px;
   margin-top: 10px;
   width: 130px;
+  height: 73px;
 }

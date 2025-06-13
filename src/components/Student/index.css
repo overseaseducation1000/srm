@@ -165,7 +165,7 @@ iframe {
   align-items: center;
   background-color: #004461;
   color: white;
-  height: 89px;
+  height: 117px;
 }
 .logo-container {
   height: 100%;
@@ -175,17 +175,18 @@ iframe {
   align-items: center;
 }
 .anchor {
-  font-size: 10px;
+  font-size: 16px;
   text-decoration: none;
   color: #ffffff;
 }
 .logo1 {
-  height: 50px;
+  height: 73px;
   width: 130px;
   margin-bottom: -10px;
 }
 .global-heading {
   margin-left: 50px;
+  font-size: 3rem;
 }
 .self-align {
   align-self: center;
