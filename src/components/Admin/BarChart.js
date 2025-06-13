@@ -196,7 +196,7 @@ function StudentBarChart() {
   };
 
   const onClickSendManually = (data) => {
-    const subject = "Stream Recommendation Test Score Details"; // email subject
+    const subject = "Stream Recommendation Test Report"; // email subject
     const body = `Dear ${data.Full_Name},%0D%0A %0D%0AHope you are doing well. Your Stream Recommendation Test submission was successful. Your test report is attached herewith. %0D%0A %0D%0A: %0D%0A %0D%0A`; // email  body
     window.location.href = `mailto:${data.Email_Address}?cc=${data.Parent_Email_Id}&subject=${subject}&body=${body}`;
   };

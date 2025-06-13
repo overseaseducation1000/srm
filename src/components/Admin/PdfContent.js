@@ -149,12 +149,7 @@ const PdfContent = ({ streamsContent, data }) => {
         </div> */}
 
         <h5>
-          <b>Student Stream Recommendation<sup style={{
-    fontSize: "10px",
-    marginLeft: "2px",
-    verticalAlign: "super",
-    fontWeight: "normal"
-  }}>TM</sup> Rank:</b>
+          <b>Student Stream Recommendation Rank:</b>
         </h5>
         <div className="barchart-table1-container">
           {/* <BarChart width={450} height={300} data={data}
