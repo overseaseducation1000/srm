@@ -55,9 +55,10 @@ const TestInstructions = () => {
         <div className="self-align">
           <p>
             <br />
-            <b>Email : overseaseducation1000@gmail.com</b>
+            <b>Email :overseaseducation1000@gmail.com
+ </b>
             <br />
-            <b>Phone : </b>9999999999
+            <b>Phone : </b> 9930257101 
           </p>
         </div>
       </div>

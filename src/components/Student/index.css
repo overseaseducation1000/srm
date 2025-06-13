@@ -165,7 +165,7 @@ iframe {
   align-items: center;
   background-color: #004461;
   color: white;
-  height: 60px;
+  height: 80px;
 }
 .logo-container {
   height: 100%;
@@ -181,7 +181,7 @@ iframe {
 }
 .logo1 {
   height: 50px;
-  width: 100px;
+  width: 130px;
   margin-bottom: -10px;
 }
 .global-heading {

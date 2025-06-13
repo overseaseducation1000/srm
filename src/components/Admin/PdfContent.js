@@ -13,6 +13,7 @@ import {
 
 const COLORS = ["#8884d8", "#82ca9d", "#AF19FF", "#FF8042", "#FFBB28"];
 
+
 const PdfContent = ({ streamsContent, data }) => {
   const BarchartData = [
     {
@@ -52,9 +53,10 @@ const PdfContent = ({ streamsContent, data }) => {
         </h1>
         <div style={{ alignSelf: "center" }}>
           <p>
-            <b>Email : </b>overseaseducation1000@gmail.com
+            <b>Email : </b> overseaseducation1000@gmail.com
+
             <br />
-            <b>Phone : </b>9999999999
+            <b>Phone : </b> 9930257101 
           </p>
         </div>
       </div>
@@ -77,7 +79,19 @@ const PdfContent = ({ streamsContent, data }) => {
             </div>
           </div>
         </div>
-        <h1 className="text-center">Stream Recommendation Test Report</h1>
+        {/* <h1 className="text-center" style={{color:"red"}}>Stream Recommendation Test Report</h1> */}
+         {/* // ...existing code... */}
+<h1 className="text-center">
+  Stream Recommendation
+  <sup style={{
+    fontSize: "10px",
+    marginLeft: "2px",
+    verticalAlign: "super",
+    fontWeight: "normal"
+  }}>TM</sup>
+  &nbsp;Test Report
+</h1>
+{/* // ...existing code... */}
         <p className="">
           Selecting a suitable career is the first step for a successful life
           ahead. Career selection can be quiet a challenging task as one is
@@ -135,7 +149,12 @@ const PdfContent = ({ streamsContent, data }) => {
         </div> */}
 
         <h5>
-          <b>Student Stream Recommendation Rank:</b>
+          <b>Student Stream Recommendation<sup style={{
+    fontSize: "10px",
+    marginLeft: "2px",
+    verticalAlign: "super",
+    fontWeight: "normal"
+  }}>TM</sup> Rank:</b>
         </h5>
         <div className="barchart-table1-container">
           {/* <BarChart width={450} height={300} data={data}

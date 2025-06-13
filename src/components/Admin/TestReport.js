@@ -32,6 +32,31 @@ function TestReport(props) {
   const [endDate, setEndDate] = useState("");
   //console.log(filterData, "hello");
   // table data
+const handleDelete = (email) => {
+  console.log(email, "email");
+  // Ask for confirmation first
+  
+  fetch(`https://sheetdb.io/api/v1/4c3fbfomg38uv/Email_Address/${email}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json",
+            Authorization: "Bearer 00icuozoymtuvwdrtuhdsrx2y78g6tx4a7m5eptx",
+    },
+  })
+    .then((response) => {
+      console.log(response, "response");
+      if (response.ok) {
+        console.log(`Row with email ${email} deleted successfully.`);
+        // Remove from both data and filterData
+        setData((prev) => prev.filter((row) => row.Email_Address !== email));
+        setFilterData((prev) => prev.filter((row) => row.Email_Address !== email));
+      } else {
+        console.error("Failed to delete the row.");
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+};
+
   const columns = [
     {
       field: "id",
@@ -40,10 +65,34 @@ function TestReport(props) {
       headerClassName: "table-header",
       cellClassName: "table-cell",
     },
+  //    {
+  //   field: "delete",
+  //   headerName: "Delete",
+  //   width: 70,
+  //   headerClassName: "table-header",
+  //   cellClassName: "table-cell",
+  //   sortable: false,
+  //   renderCell: (params) => (
+  //     <button
+  //       onClick={() => handleDelete(params.row.Email_Address)}
+  //       style={{
+  //         padding: "3px",
+  //         fontSize: "10px",
+  //         backgroundColor: "#d9534f",
+  //         color: "white",
+  //         border: "none",
+  //         borderRadius: "4px",
+  //         cursor: "pointer",
+  //       }}
+  //     >
+  //       Delete
+  //     </button>
+  //   ),
+  // },
     {
       field: "Timestamp",
       headerName: "CompletedOn",
-      width: 100,
+      width: 110,
       headerClassName: "table-header",
       cellClassName: "table-cell",
     },
@@ -230,9 +279,16 @@ function TestReport(props) {
   // handleSearch function to set the search value to setSearch function
   const handleSearch = (e) => {
     setSearch(e.target.value);
-    if ((e.target.value = "" || e.key === "Backspace" || e.keyCode === 8)) {
-      setFilterData(data);
-    }
+    if (e.target.value === "" || e.key === "Backspace" || e.keyCode === 8) {
+  setFilterData(data);
+} else {
+  const searchValue = e.target.value.toLowerCase();
+  const filtered = data.filter((i) =>
+    i.Email_Address?.toLowerCase().includes(searchValue)
+  );
+  setFilterData(filtered);
+}
+
   };
 
   // handleKeyDown function to set search value to setSearch function and data to setFilterData function
@@ -264,7 +320,7 @@ function TestReport(props) {
   const filteredData = filterData.filter((i) =>
     i.Email_Address?.toLowerCase().includes(search?.toLowerCase())
   );
-
+console.log(filteredData.length, "filteredData");
   // handleUpdate function to update all streams scores to google sheet of stream recommendation Test google sheet using sheet db google api
   const handleUpdate = (item) => {
     if (item.Total_Score === undefined) {

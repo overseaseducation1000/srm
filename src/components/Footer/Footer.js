@@ -23,22 +23,22 @@ const Footer = () => {
         <div className="sb__footer-below-links">
           <a>
             <div>
-              <p>Terms & Conditions</p>
+              {/* <p>Terms & Conditions</p> */}
             </div>
           </a>
           <a>
             <div>
-              <p>Privacy</p>
+              {/* <p>Privacy</p> */}
             </div>
           </a>
           <a>
             <div>
-              <p>About</p>
+              {/* <p>About</p> */}
             </div>
           </a>
           <a>
             <div>
-              <p>Contact</p>
+              {/* <p>Contact</p> */}
             </div>
           </a>
         </div>

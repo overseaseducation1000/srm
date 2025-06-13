@@ -16,7 +16,7 @@
   padding-left: 30px;
   background-color: #004461;
   color: white;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -167,4 +167,5 @@
   background-color: #ffffff;
   border-radius: 8px;
   margin-top: 10px;
+  width: 130px;
 }

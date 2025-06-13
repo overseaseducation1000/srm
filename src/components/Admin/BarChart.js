@@ -2,6 +2,8 @@
 // import react, jspdf, @emailjs/browser, react-bootstrap, react-to-print, react-router-dom, recharts and css files index.css, bootstrap/dist/css/bootstrap.min.css to render BarChart component
 import React, { useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import html2pdf from "html2pdf.js";
+
 import Logo from "../../Logo.png";
 import jsPDF from "jspdf";
 import Popup from "reactjs-popup";
@@ -29,6 +31,8 @@ import {
 } from "recharts";
 
 function StudentBarChart() {
+  const [showPdfContent, setShowPdfContent] = useState(false);
+
   const [cursor, setCursor] = useState("default");
   // detailsPdf is a useref hook used to persist values between renders
   const detailsPdf = useRef();
@@ -123,7 +127,43 @@ function StudentBarChart() {
   const generatePdf = useReactToPrint({
     content: () => detailsPdf.current,
     documentTitle: data.Full_Name + "_score_report",
+    
   });
+//   const generatePdf = () => {
+//   setTimeout(() => {
+//     if (!detailsPdf.current) return;
+//     html2pdf()
+//       .from(detailsPdf.current)
+//       .set({
+//         margin: 0.5,
+//         filename: `${data.Full_Name || "report"}_score_report.pdf`,
+//         image: { type: "jpeg", quality: 0.98 },
+//         html2canvas: { scale: 2 },
+//         jsPDF: { unit: "in", format: "a5", orientation: "portrait" }
+//       })
+//       .save();
+//   }, 500); // 500ms delay
+// }
+//   const generatePdf = () => {
+//   setShowPdfContent(true); // Show the content
+//   setTimeout(() => {
+//     if (detailsPdf.current) {
+//       html2pdf()
+//         .from(detailsPdf.current)
+//         .set({
+//           margin: 0.5,
+//           filename: `${data.Full_Name || "report"}_score_report.pdf`,
+//           image: { type: "jpeg", quality: 0.98 },
+//           html2canvas: { scale: 2 },
+//           jsPDF: { unit: "in", format: "a4", orientation: "portrait" }
+//         })
+//         .save()
+//         .then(() => setShowPdfContent(false)); // Hide after download
+//     } else {
+//       setShowPdfContent(false);
+//     }
+//   }, 500); // Wait for DOM update
+// };
   // handle Submit function used to sent email to students regarding candidate details and scores through email
   const handleSubmit = (item) => {
     data.new_Mail = item;
@@ -157,7 +197,7 @@ function StudentBarChart() {
 
   const onClickSendManually = (data) => {
     const subject = "Stream Recommendation Test Score Details"; // email subject
-    const body = `Dear ${data.Full_Name},%0D%0A %0D%0A     Hope you are doing well. Your Strem Recommendation Test submission was successful. Here is your test score. We will share the detailed score report and discuss the stream that is best suited for you over a call. %0D%0A %0D%0AYour Stream Recommendation Test Scores: %0D%0A %0D%0A`; // email  body
+    const body = `Dear ${data.Full_Name},%0D%0A %0D%0AHope you are doing well. Your Stream Recommendation Test submission was successful. Your test report is attached herewith. %0D%0A %0D%0A: %0D%0A %0D%0A`; // email  body
     window.location.href = `mailto:${data.Email_Address}?cc=${data.Parent_Email_Id}&subject=${subject}&body=${body}`;
   };
 
@@ -239,6 +279,7 @@ function StudentBarChart() {
         <div ref={detailsPdf} className="pdf-only">
           <PdfContent streamsContent={streams} data={data} />
         </div>
+        
         <div>
           <h1 className="rank-heading">Stream Recommendation</h1>
           <div className="barchart-student-container">

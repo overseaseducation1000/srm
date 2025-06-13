@@ -136,9 +136,9 @@ function SendAssessments(props) {
     const subject = "Stream Recommendation Test from Study Global"; // email subject
     const imageUrl =
       "https://res.cloudinary.com/de5cu0mab/image/upload/v1688971136/Logo_Final_uovjgi.png";
-    const body =
-      "Hello Students, %0D%0A  %0D%0AGreetings from Study Global. Below is the link for you to give the Stream Recommendation Test, which will help you choose a career path that suits your aptitude and interests. %0D%0A %0D%0AHere is the link: https://study-global.netlify.app/studentLogin %0D%0A  %0D%0A ";
-
+    
+const body =
+  "Hello Students,%0D%0A%0D%0AGreetings from Study Global. Below is the link for you to give the Stream Recommendation Test, which will help you choose a career path that suits your aptitude and interests.%0D%0A%0D%0AHere is the link: https://study-global.netlify.app/studentLogin%0D%0A%0D%0A";
     // send mail when file format is txt, docx, xls, xlsx
     if (
       fileExtension === "txt" ||
@@ -146,7 +146,6 @@ function SendAssessments(props) {
       fileExtension === "xlsx" ||
       fileExtension === "docx"
     ) {
-      // send mail using mailto for uploaded document
       const fromAddress = "overseaseducation1000@gmail.com";
       window.open(
         `mailto:overseaseducation1000@gmail.com?bcc=${allMails}&subject=${subject}&body=${body}` +

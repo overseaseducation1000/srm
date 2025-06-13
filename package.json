@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.0",
     "docxtemplater": "^3.37.11",
     "gapi-script": "^1.2.0",
+    "html2pdf.js": "^0.10.3",
     "js-cookie": "^3.0.5",
     "jspdf": "^2.5.1",
     "pizzip": "^3.1.4",
