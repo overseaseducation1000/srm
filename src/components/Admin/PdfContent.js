@@ -10,7 +10,7 @@ import {
   Legend,
 } from "recharts";
 //import "./index.css";
-
+  console.log("PdfContent component loaded");
 const COLORS = ["#8884d8", "#82ca9d", "#AF19FF", "#FF8042", "#FFBB28"];
 
 
