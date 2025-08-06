@@ -203,53 +203,53 @@ const AdminLogin = () => {
 
       // using map method for keys of object in stream Data to calculate scores
       Object.keys(item).map((score, i) => {
-        if (i > 9 && i < 90) {
+        if (i > 8 && i < 90) {
           // if index is in range of 10-90 then the below if condition executes
-          if (i - 9 in humanities_aptitude_responses) {
+          if (i - 8 in humanities_aptitude_responses) {
             // if index exists in humanities_aptitude_responses object then the below if condition executes
-            if (item[score] === humanities_aptitude_responses[i - 9]) {
+            if (item[score] === humanities_aptitude_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in humanities_aptitude_responses object then the below if condition executes and caculates humanities_aptitude_score
               humanities_aptitude_score += 1;
             }
-          } else if (i - 9 in commerce_aptitude_reponses) {
+          } else if (i - 8 in commerce_aptitude_reponses) {
             // if index exists in commerce_aptitude_reponses object then the below if condition executes
-            if (item[score] === commerce_aptitude_reponses[i - 9]) {
+            if (item[score] === commerce_aptitude_reponses[i - 8]) {
               // if the value that is stored in item equals to key that is in commerce_aptitude_reponses object then the below if condition executes and caculates commerce_aptitude_score
               commerce_aptitude_score += 1;
             }
-          } else if (i - 9 in science_bio_aptitude_responses) {
+          } else if (i - 8 in science_bio_aptitude_responses) {
             // if index exists in science_bio_aptitude_responses object then the below if condition executes
-            if (item[score] === science_bio_aptitude_responses[i - 9]) {
+            if (item[score] === science_bio_aptitude_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in science_bio_aptitude_responses object then the below if condition executes and caculates science_bio_aptitude_score
               science_bio_aptitude_score += 1;
             }
-          } else if (i - 9 in science_math_aptitude_responses) {
+          } else if (i - 8 in science_math_aptitude_responses) {
             // if index exists in science_math_aptitude_responses object then the below if condition executes
-            if (item[score] === science_math_aptitude_responses[i - 9]) {
+            if (item[score] === science_math_aptitude_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in science_math_aptitude_responses object then the below if condition executes and caculates science_math_aptitude_score
               science_math_aptitude_score += 1;
             }
-          } else if (i - 9 in humanities_interests_responses) {
+          } else if (i - 8 in humanities_interests_responses) {
             // if index exists in humanities_interests_responses object then the below if condition executes
-            if (item[score] === humanities_interests_responses[i - 9]) {
+            if (item[score] === humanities_interests_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in humanities_interests_responses object then the below if condition executes and caculates humanities_interests_score
               humanities_interests_score += 1;
             }
-          } else if (i - 9 in commerce_interests_responses) {
+          } else if (i - 8 in commerce_interests_responses) {
             // if index exists in commerce_interests_responses object then the below if condition executes
-            if (item[score] === commerce_interests_responses[i - 9]) {
+            if (item[score] === commerce_interests_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in commerce_interests_responses object then the below if condition executes and caculates commerce_interests_score
               commerce_interests_score += 1;
             }
-          } else if (i - 9 in science_bio_interests_responses) {
+          } else if (i - 8 in science_bio_interests_responses) {
             // if index exists in science_bio_interests_responses object then the below if condition executes
-            if (item[score] === science_bio_interests_responses[i - 9]) {
+            if (item[score] === science_bio_interests_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in science_bio_interests_responses object then the below if condition executes and caculates science_bio_interests_score
               science_bio_interests_score += 1;
             }
-          } else if (i - 9 in science_math_interests_responses) {
+          } else if (i - 8 in science_math_interests_responses) {
             // if index exists in science_math_interests_responses object then the below if condition executes
-            if (item[score] === science_math_interests_responses[i - 9]) {
+            if (item[score] === science_math_interests_responses[i - 8]) {
               // if the value that is stored in item equals to key that is in science_math_interests_responses object then the below if condition executes and caculates science_math_interests_score
               science_math_interests_score += 1;
             }

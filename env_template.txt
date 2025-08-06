@@ -1,0 +1,38 @@
+# Google API Configuration
+REACT_APP_API_KEY=your_google_api_key_here
+REACT_APP_CLIENT_ID=your_google_client_id_here
+REACT_APP_SCRIPT_SRC=https://apis.google.com/js/api.js
+
+# Google Sheets Configuration
+REACT_APP_GOOGLE_SHEET_ID=your_google_sheet_id_here
+REACT_APP_GOOGLE_SHEET_NAME=Sheet1
+
+# Answer Keys for Stream Recommendation Test
+# These should be JSON objects where keys are question numbers (as strings) and values are correct answers
+
+# Humanities Aptitude Questions (typically logical reasoning, verbal ability questions)
+REACT_APP_HUMANITIES_APTITUDE_QUESTIONS_ANSWERS={"13":"Oppose","14":"11","15":"NPVOUBJO","16":"Husband and Wife","17":"64","18":"1,00,000","31":"8","32":"6,8","33":"16","34":"Peter and James","35":"5","36":"Wednesday","49":"Milk","50":"451","51":"Milk","52":"3","53":"12.5","54":"2","67":"254","68":"Cousin"}
+
+# Humanities Interests Questions (typically questions about literature, arts, languages)
+REACT_APP_HUMANITIES_INTERESTS_QUESTIONS_ANSWERS={"1":"Yes","3":"Yes","10":"Yes","19":"Yes","22":"Yes","25":"Yes","28":"Yes","37":"Yes","40":"Yes","46":"Yes","55":"Yes","61":"Yes","69":"Yes","75":"Yes","78":"Yes"}
+
+# Commerce Aptitude Questions (typically numerical ability, logical reasoning)
+REACT_APP_COMMERCE_APTITUDE_QUESTIONS_ANSWERS={"13":"Oppose","14":"11","15":"NPVOUBJO","16":"Husband and Wife","17":"64","18":"1,00,000","31":"8","32":"6,8","33":"16","34":"Peter and James","35":"5","36":"Wednesday","49":"Milk","50":"451","51":"Milk","52":"3","53":"12.5","54":"2","67":"254","68":"Cousin"}
+
+# Commerce Interests Questions (typically questions about business, economics, finance)
+REACT_APP_COMMERCE_INTERESTS_QUESTIONS_ANSWERS={"3":"Yes","21":"Yes","23":"Yes","29":"Yes","41":"Yes","57":"Yes","58":"Yes","71":"Yes","73":"Yes"}
+
+# Science Bio Aptitude Questions (typically logical reasoning, numerical ability)
+REACT_APP_SCIENCE_BIO_APTITUDE_QUESTIONS_ANSWERS={"13":"Oppose","14":"11","15":"NPVOUBJO","16":"Husband and Wife","17":"64","18":"1,00,000","31":"8","32":"6,8","33":"16","34":"Peter and James","35":"5","36":"Wednesday","49":"Milk","50":"451","51":"Milk","52":"3","53":"12.5","54":"2","67":"254","68":"Cousin"}
+
+# Science Bio Interests Questions (typically questions about biology, medicine, healthcare)
+REACT_APP_SCIENCE_BIO_INTERESTS_QUESTIONS_ANSWERS={"2":"Yes","8":"Yes","12":"Yes","20":"Yes","26":"Yes","30":"Yes","38":"Yes","44":"Yes","48":"Yes","56":"Yes","62":"Yes","66":"Yes","70":"Yes","76":"Yes","80":"Yes"}
+
+# Science Math Aptitude Questions (typically logical reasoning, numerical ability)
+REACT_APP_SCIENCE_MATHS_APTITUDE_QUESTIONS_ANSWERS={"13":"Oppose","14":"11","15":"NPVOUBJO","16":"Husband and Wife","17":"64","18":"1,00,000","31":"8","32":"6,8","33":"16","34":"Peter and James","35":"5","36":"Wednesday","49":"Milk","50":"451","51":"Milk","52":"3","53":"12.5","54":"2","67":"254","68":"Cousin"}
+
+# Science Math Interests Questions (typically questions about physics, mathematics, engineering)
+REACT_APP_SCIENCE_MATHS_INTERESTS_QUESTIONS_ANSWERS={"4":"Yes","5":"Yes","6":"Yes","11":"Yes","24":"Yes","42":"Yes","45":"Yes","60":"Yes","63":"Yes","65":"Yes","72":"Yes","77":"Yes"}
+
+# Total Questions in the Test
+REACT_APP_TOTAL_QUESTIONS=80 
